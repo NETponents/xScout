@@ -33,4 +33,8 @@ class TestVersion < Test::Unit::TestCase
     get '/pricing'
     assert last_response.ok?
   end
+  def test_homefeaturespage
+    get '/features'
+    assert last_response.ok?
+  end
 end
