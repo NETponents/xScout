@@ -20,11 +20,10 @@ addons:
 install:
   - bundle install
 script:
+  - chmod +x ./build/build.sh
   - ./build/build.sh
   # Begin testing
-  - echo 'Beginning unit tests...'
   - rake test --trace
-  - echo 'Unit testing is completed!'
 deploy:
   provider: heroku
   api_key: "9951e24c-b489-48fe-8a60-b325e8d850dd"
