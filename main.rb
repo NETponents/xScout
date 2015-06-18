@@ -18,3 +18,8 @@ get '/pricing' do
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
   slim :homepricing
 end
+get '/features' do
+  @PageTitle = "Features"
+  @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
+  slim :homefeatures
+end
