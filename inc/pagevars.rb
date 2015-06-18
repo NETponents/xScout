@@ -1,6 +1,6 @@
 module Pagevars
   require_relative 'builddata'
-  def setVars(pageTitle)
+  def Pagevars.setVars(pageTitle)
     @PageTitle = pageTitle
     @TRAVISBUILDNUMBER = getCIstring()
   end
