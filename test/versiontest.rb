@@ -37,6 +37,9 @@ class TestVersion < Test::Unit::TestCase
     get '/features'
     assert last_response.ok?
   end
+  def test_homecontactpage
+    get '/contact'
+    assert last_response.ok?
   def test_apihome
     get '/api'
     assert last_response.ok?
