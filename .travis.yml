@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.2.1
+env:
+  - CODECLIMATE_REPO_TOKEN=7cb44e31649d1165ed2bc0bc4c5650982f9a5ec1bd8d357603a91e0be010d898
 git:
   submodules: false
 notifications:
