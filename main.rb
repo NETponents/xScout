@@ -13,7 +13,7 @@ get '/' do
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
   slim :home
 end
-get '/contact'
+get '/contact' do
   @PageTitle = "Contact"
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
   slim :homecontact
