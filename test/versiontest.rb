@@ -6,3 +6,4 @@ class TestVersion < Test::Unit::TestCase
   def test_VersionString
     assert_not_equal(nil, getCIstring())
   end
+end
