@@ -51,6 +51,6 @@ class TestVersion < Test::Unit::TestCase
   end
   def test_apicatch
     get '/api/notexist'
-    assert_equal(last_response.body, "404 API call not found")
+    assert_equal("404 API call not found", last_response.body)
   end
 end
