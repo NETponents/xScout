@@ -4,5 +4,5 @@ require "test/unit"
 
 class TestVersion < Test::Unit::TestCase
   def testVersionString
-    puts getCIstring()
+    assert_not_equal(nil, getCIstring())
   end
