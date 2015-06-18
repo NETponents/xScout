@@ -16,7 +16,7 @@ end
 get '/contact'
   @PageTitle = "Contact"
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
-  slim :contact
+  slim :homecontact
 get '/pricing' do
   @PageTitle = "Pricing"
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
