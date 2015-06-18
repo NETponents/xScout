@@ -2,6 +2,7 @@ require_relative "../test_helper"
 require_relative "../inc/builddata"
 require "test/unit"
 require 'rack/test'
+require_relative '../main'
 
 class TestVersion < Test::Unit::TestCase
   def test_VersionCommitString
