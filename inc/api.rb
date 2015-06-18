@@ -1,6 +1,6 @@
 module API
   require_relative "pagevars"
-  def processCMD(cmd)
+  def API.processCMD(cmd)
     if cmd == ""
       return "The API is online"
     elsif cmd == "version"
