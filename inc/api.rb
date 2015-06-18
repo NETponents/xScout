@@ -1,9 +1,9 @@
 module API
   require_relative "pagevars"
-  def API.processCMD()
+  def API.processCMD0()
     return "The API is online"
   end
-  def API.processCMD(cmd)
+  def API.processCMD1(cmd)
     if cmd == "version"
       return Pagevars.setVars("CIbuild")
     else
