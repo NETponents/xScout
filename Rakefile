@@ -1,3 +1,3 @@
 task :test do
-  ruby test/versiontest.rb
+  ruby "test/versiontest.rb"
 end
