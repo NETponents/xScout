@@ -10,5 +10,10 @@ set :bind, ENV['IP'] || '0.0.0.0'
 get '/' do
   @PageTitle = "Home"
   @TRAVISBUILDNUMBER = getCIstring()
-  slim :newhome
+  slim :home
+end
+get '/pricing' do
+  @PageTitle = "Pricing"
+  @TRAVISBUILDNUMBER = getCIstring()
+  slim :homepricing
 end
