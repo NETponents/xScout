@@ -4,8 +4,11 @@ module Pagevars
   rescue
     raise "Missing builddata file"
   end
-  def Pagevars.setVars(pageTitle)
-    @PageTitle = pageTitle
-    @TRAVISBUILDNUMBER = Builddata.getCIstring()
+  def Pagevars.setVars(vname)
+    if vname == "CIbuild"
+      return Builddata.getCIstring()
+    else
+      return "Error"
+    end
   end
 end

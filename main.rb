@@ -9,10 +9,12 @@ set :port, ENV['PORT'] || 8080
 set :bind, ENV['IP'] || '0.0.0.0'
 
 get '/' do
-  Pagevars.setVars("Home")
+  @PageTitle = "Home"
+  @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
   slim :home
 end
 get '/pricing' do
-  Pagevars.setVars("Pricing")
+  @PageTitle = "Pricing"
+  @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
   slim :homepricing
 end
