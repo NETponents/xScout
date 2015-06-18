@@ -29,8 +29,15 @@ get '/features' do
   slim :homefeatures
 end
 #Beginning API
+get '/api/version' do
+  @PageTitle = "API v1"
+  @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
+  @apiresponse = @TRAVISBUILDNUMBER
+  slim :apiresponse
+end
 get '/api' do
   @PageTitle = "API v1"
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
   @apiresponse = "The API is online!"
+  slim :apiresponse
 end
