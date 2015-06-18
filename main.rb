@@ -30,8 +30,8 @@ get '/features' do
 end
 #Beginning API
 get '/api/:cmd1' do
-  API.processCMD(params[:cmd1])
+  API.processCMD1(params[:cmd1])
 end
 get '/api' do
-  API.processCMD
+  API.processCMD0()
 end
