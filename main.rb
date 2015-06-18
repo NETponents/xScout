@@ -30,14 +30,8 @@ get '/features' do
 end
 #Beginning API
 get '/api/:cmd1' do
-  @PageTitle = "API v1"
-  @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
-  @apiresponse = API.processCMD(params[:cmd1])
-  slim :apiresponse
+  API.processCMD(params[:cmd1])
 end
 get '/api' do
-  @PageTitle = "API v1"
-  @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
-  @apiresponse = API.processCMD
-  slim :apiresponse
+  API.processCMD
 end
