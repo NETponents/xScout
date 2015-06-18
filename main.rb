@@ -3,7 +3,7 @@ require 'rubygems'
 require 'sinatra'
 require 'slim'
 require_relative 'inc/pagevars'
-#include 'Pagevars'
+require_relative 'inc/api'
 
 set :port, ENV['PORT'] || 8080
 set :bind, ENV['IP'] || '0.0.0.0'
@@ -29,15 +29,15 @@ get '/features' do
   slim :homefeatures
 end
 #Beginning API
-get '/api/version' do
+get '/api/:cmd1' do
   @PageTitle = "API v1"
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
-  @apiresponse = @TRAVISBUILDNUMBER
+  @apiresponse = API.processCMD(params[:cmd1])
   slim :apiresponse
 end
 get '/api' do
   @PageTitle = "API v1"
   @TRAVISBUILDNUMBER = Pagevars.setVars("CIbuild")
-  @apiresponse = "The API is online!"
+  @apiresponse = API.processCMD
   slim :apiresponse
 end
