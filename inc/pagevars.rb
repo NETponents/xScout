@@ -1,7 +1,11 @@
 module Pagevars
-  require_relative 'builddata'
+  begin
+    require_relative 'builddata'
+  rescue
+    raise "Missing builddata file"
+  end
   def Pagevars.setVars(pageTitle)
     @PageTitle = pageTitle
-    @TRAVISBUILDNUMBER = getCIstring()
+    @TRAVISBUILDNUMBER = Builddata.getCIstring()
   end
 end

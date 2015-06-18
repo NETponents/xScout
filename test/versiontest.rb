@@ -6,13 +6,13 @@ require_relative '../main'
 
 class TestVersion < Test::Unit::TestCase
   def test_VersionCommitString
-    assert_not_equal(nil, CIgetcommit())
+    assert_not_equal(nil, Builddata.CIgetcommit())
   end
   def test_VersionBuildString
-    assert_not_equal(nil, CIgetbuild())
+    assert_not_equal(nil, Builddata.CIgetbuild())
   end
   def test_VersionString
-    assert_not_equal(nil, getCIstring())
+    assert_not_equal(nil, Builddata.getCIstring())
   end
   include Rack::Test::Methods
   def app
