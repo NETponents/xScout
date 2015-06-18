@@ -27,7 +27,7 @@ script:
   - head ./inc/builddata.rb
   # Begin testing
   - echo 'Beginning unit tests...'
-  - rake
+  - rake test test/versiontest.rb
   - echo 'Unit testing is completed!'
 deploy:
   provider: heroku
